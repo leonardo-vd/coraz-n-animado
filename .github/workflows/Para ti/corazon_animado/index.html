@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CORAZON ANIMADO ENCODED</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      background-image: url('beautiful-nature-landscape-background-free-vector.jpg'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: Arial, sans-serif; /* Cambia la fuente de letra si lo deseas */
+      position: relative;
+    }
+    .text-container {
+      position: absolute;
+      top: 20px; /* Ajusta la posición vertical según sea necesario */
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      animation: fadeIn 2s ease-in-out forwards, colorChange 5s infinite alternate; /* Animación de entrada y cambio de color */
+    }
+    h1 {
+      color: #5d9d94; /* Cambia el color del texto según sea necesario */
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes colorChange {
+      0% {
+        color: #5d9d94; /* Color inicial */
+      }
+      100% {
+        color: #ffd700; /* Color final (amarillo dorado) */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="text-container">
+  <h1 id="mainText">¡Hola, Haz click en el corazón!</h1>
+</div>
+
+<label>
+  <input type="checkbox">
+  <svg viewBox="0 0 532 532">
+    <path id="heart" transform="translate(10, 10)" d="M256,96.5l-19.7-20.3C186.1,24.3,104.5,15.9,49.7,62.6c-62.8,53.6-66.1,149.8-9.9,207.9l193.5,199.8 c12.5,12.9,32.8,12.9,45.3,0l193.5-199.8c56.3-58.1,53-154.3-9.8-207.9l0,0C407.5,15.9,326,24.3,275.7,76.2L256,96.5z"/>
+  </svg>
+  <span></span>
+</label>
+
+<script>
+  // Función para redirigir a otro documento HTML después de un retraso
+  function redirectToAnotherPage() {
+    setTimeout(function() {
+      window.location.href = 'C:\\Users\\INVERSOL\\Desktop\\Para ti\\Flores_amarillas\\Aloha.html'; // Reemplaza 'otra_pagina.html' con la ruta de tu otro documento HTML
+    }, 500); // 8000 milisegundos = 8 segundos
+  }
+
+  // Obtén el elemento h1
+  var mainText = document.getElementById('mainText');
+
+  // Escucha el evento de clic en el corazón
+  document.getElementById('heart').addEventListener('click', function() {
+    redirectToAnotherPage(); // Llama a la función para redirigir después de hacer clic en el corazón
+  });
+</script>
+
+</body>
+</html>
